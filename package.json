@@ -1,0 +1,32 @@
+{
+  "name": "olympics_stats",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "husky": "^3.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "rubocop",
+      "pre-push": "rspec"
+    }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheMindset/Olympics_Stats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheMindset/Olympics_Stats/issues"
+  },
+  "homepage": "https://github.com/TheMindset/Olympics_Stats#readme"
+}
