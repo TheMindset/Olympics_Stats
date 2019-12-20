@@ -10,7 +10,10 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.3'
 gem 'dotenv', '~> 2.7', '>= 2.7.5'
-
+gem 'faraday', '~> 0.17.1'
+gem 'fast_jsonapi', '~> 1.5'
+gem 'vcr', '~> 5.0'
+gem 'bcrypt', '~> 3.1', '>= 3.1.13'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -30,9 +33,13 @@ group :development do
 end
 
 group :test do
+  gem 'capybara', '~> 3.29'
   gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2'
   gem 'simplecov', '~> 0.17.1'
   gem 'codecov', require: false
+  gem 'database_cleaner', '~> 1.7'
+  gem 'selenium-webdriver', '~> 3.142', '>= 3.142.6'
+  gem 'rspec_junit_formatter', '~> 0.4.1'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
