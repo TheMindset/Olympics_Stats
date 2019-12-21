@@ -6,8 +6,9 @@ class CreateCompetitors < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :sex
       t.integer :age
-      t.string :height
-      t.string :weight
+      t.integer :height
+      t.integer :weight
+      t.belongs_to :team
 
       t.timestamps
     end
