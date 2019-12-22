@@ -21,7 +21,7 @@ Metrics/BlockLength:
     - 'spec/**/*.rb'
     - 'Guardfile'
     - 'vendor/bundle'
-    - 'lib/tasks/import_csv.rake'
+    - 'lib/tasks/import_olympic_data.rake'
     - 'config/routes.rb'
 
 # Unpractical and not DRY
