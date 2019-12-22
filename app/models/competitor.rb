@@ -29,5 +29,5 @@ class Competitor < ApplicationRecord
   has_many :competitor_events
   has_many :events, through: :competitor_events
 
-  enum sex: { F: 0, M: 0 }
+  enum sex: { F: 0, M: 1 }
 end
