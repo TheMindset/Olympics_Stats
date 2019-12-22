@@ -5,6 +5,7 @@ class CreateCompetitorEvents < ActiveRecord::Migration[5.2]
     create_table :competitor_events do |t|
       t.belongs_to :event
       t.belongs_to :competitor
+      t.integer :medal
 
       t.timestamps
     end

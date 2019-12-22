@@ -5,6 +5,7 @@
 # Table name: competitor_events
 #
 #  id            :bigint           not null, primary key
+#  medal         :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  competitor_id :bigint
@@ -20,5 +21,6 @@ FactoryBot.define do
   factory :competitor_event do
     competitor { FactoryBot.create(:competitor) }
     event { FactoryBot.create(:event) }
+    medal { ["NA", "Bronze", "Silver", "Gold"].sample }
   end
 end

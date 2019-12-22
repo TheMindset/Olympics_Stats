@@ -5,6 +5,7 @@
 # Table name: competitor_events
 #
 #  id            :bigint           not null, primary key
+#  medal         :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  competitor_id :bigint
@@ -19,4 +20,6 @@
 class CompetitorEvent < ApplicationRecord
   belongs_to :competitor
   belongs_to :event
+
+  enum medal: { NA: 0, Bronze: 1, Silver: 2, Gold: 3 }
 end

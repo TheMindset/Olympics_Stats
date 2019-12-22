@@ -5,6 +5,7 @@
 # Table name: competitor_events
 #
 #  id            :bigint           not null, primary key
+#  medal         :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  competitor_id :bigint
@@ -28,5 +29,6 @@ RSpec.describe CompetitorEvent, type: :model do
 
     it { is_expected.to belong_to(:event) }
     it { is_expected.to belong_to(:competitor) }
+    it { is_expected.to define_enum_for(:medal) }
   end
 end
