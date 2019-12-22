@@ -26,6 +26,6 @@ FactoryBot.define do
     weight { rand(40..110) }
     sex { ["M", "F"].sample }
     name { Faker::Name.unique.name }
-    team { FactoryBot.create(team) }
+    team { FactoryBot.create(:team) }
   end
 end
