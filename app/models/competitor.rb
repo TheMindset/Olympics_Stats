@@ -25,4 +25,7 @@ class Competitor < ApplicationRecord
   belongs_to :team
   has_many :competitor_sports
   has_many :sports, through: :competitor_sports
+
+  has_many :competitor_events
+  has_many :events, through: :competitor_events
 end
