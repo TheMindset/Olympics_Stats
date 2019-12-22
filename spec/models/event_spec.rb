@@ -16,4 +16,11 @@ RSpec.describe Event, type: :model do
   it "has a valid factory" do
     expect(build(:event)).to be_valid
   end
+
+  describe 'associations' do
+    let(:event) { build(:event) }
+
+    it { is_expected.to have_many(:competitor_events) }
+    it { is_expected.to have_many(:competitors).through(:competitor_events) }
+  end
 end

@@ -11,4 +11,6 @@
 #
 
 class Event < ApplicationRecord
+  has_many :competitor_events
+  has_many :competitors, through: :competitor_events
 end
