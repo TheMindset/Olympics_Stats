@@ -11,6 +11,8 @@
 #
 
 class Sport < ApplicationRecord
+  validates :name, presence: true
+
   has_many :competitor_sports
   has_many :competitors, through: :competitor_sports
 end
