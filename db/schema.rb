@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_12_22_064531) do
   create_table "competitor_events", force: :cascade do |t|
     t.bigint "event_id"
     t.bigint "competitor_id"
+    t.integer "medal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["competitor_id"], name: "index_competitor_events_on_competitor_id"
@@ -35,7 +36,7 @@ ActiveRecord::Schema.define(version: 2019_12_22_064531) do
 
   create_table "competitors", force: :cascade do |t|
     t.string "name"
-    t.string "sex"
+    t.integer "sex"
     t.integer "age"
     t.integer "height"
     t.integer "weight"

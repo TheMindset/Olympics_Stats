@@ -8,7 +8,7 @@
 #  age        :integer
 #  height     :integer
 #  name       :string
-#  sex        :string
+#  sex        :integer
 #  weight     :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -28,4 +28,6 @@ class Competitor < ApplicationRecord
 
   has_many :competitor_events
   has_many :events, through: :competitor_events
+
+  enum sex: { F: 0, M: 0 }
 end

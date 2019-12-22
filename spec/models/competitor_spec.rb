@@ -8,7 +8,7 @@
 #  age        :integer
 #  height     :integer
 #  name       :string
-#  sex        :string
+#  sex        :integer
 #  weight     :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -34,5 +34,6 @@ RSpec.describe Competitor, type: :model do
     it { is_expected.to have_many(:sports).through(:competitor_sports) }
     it { is_expected.to have_many(:competitor_events) }
     it { is_expected.to have_many(:events).through(:competitor_events) }
+    it { is_expected.to define_enum_for(:sex) }
   end
 end

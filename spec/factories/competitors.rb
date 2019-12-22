@@ -8,7 +8,7 @@
 #  age        :integer
 #  height     :integer
 #  name       :string
-#  sex        :string
+#  sex        :integer
 #  weight     :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
