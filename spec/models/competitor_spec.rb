@@ -30,5 +30,7 @@ RSpec.describe Competitor, type: :model do
     let(:competitor) { build(:competitor) }
 
     it { is_expected.to belong_to(:team) }
+    it { is_expected.to have_many(:competitor_sports) }
+    it { is_expected.to have_many(:sports).through(:competitor_sports) }
   end
 end

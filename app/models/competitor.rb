@@ -23,4 +23,6 @@ class Competitor < ApplicationRecord
   validates :name, presence: true
 
   belongs_to :team
+  has_many :competitor_sports
+  has_many :sports, through: :competitor_sports
 end

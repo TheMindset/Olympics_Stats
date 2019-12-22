@@ -22,4 +22,11 @@ RSpec.describe CompetitorSport, type: :model do
   it "has a valid factory" do
     expect(build(:competitor_sport)).to be_valid
   end
+
+  describe 'associations' do
+    let(:competitor_sport) { build(:competitor_sport) }
+
+    it { is_expected.to belong_to(:sport) }
+    it { is_expected.to belong_to(:competitor) }
+  end
 end
