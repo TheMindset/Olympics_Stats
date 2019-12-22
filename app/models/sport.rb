@@ -11,4 +11,6 @@
 #
 
 class Sport < ApplicationRecord
+  has_many :competitor_sports
+  has_many :competitors, through: :competitor_sports
 end
