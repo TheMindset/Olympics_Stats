@@ -50,7 +50,7 @@ RSpec.describe Competitor, type: :model do
     end
 
     it "#youngest competitor" do
-      youngest = create(:competitor, age: 20)
+      youngest = create(:competitor, age: 19)
       create(:competitor, age: 45)
       create(:competitor, age: 31)
 

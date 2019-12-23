@@ -21,7 +21,7 @@
 
 FactoryBot.define do
   factory :competitor do
-    age { rand(10..40) }
+    age { rand(20..40) }
     height { rand(160..220) }
     weight { rand(40..110) }
     sex { ["M", "F"].sample }
