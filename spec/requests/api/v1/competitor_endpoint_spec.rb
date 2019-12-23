@@ -29,7 +29,7 @@ RSpec.describe 'Competitor endpoint', type: :request do
 
     expect(response).to be_successful
 
-    youngest_competitor = JSON.parse(response.body, symbolize_names: true)[:data][0][:attributes]
+    youngest_competitor = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
 
     expect(youngest_competitor[:age]).to eq(19)
   end
@@ -42,7 +42,7 @@ RSpec.describe 'Competitor endpoint', type: :request do
 
     expect(response).to be_successful
 
-    oldest_competitor = JSON.parse(response.body, symbolize_names: true)[:data][0][:attributes]
+    oldest_competitor = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
 
     expect(oldest_competitor[:age]).to eq(42)
   end
