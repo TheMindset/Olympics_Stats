@@ -42,7 +42,7 @@ RSpec.describe Competitor, type: :model do
       comp1, comp2 = create_list(:competitor, 3)
 
       create_list(:competitor_event_with_medal, 5, competitor: comp1)
-      create_list(:competitor_event_without_medal, 2, competitor: comp2)
+      create_list(:competitor_event_with_medal, 2, competitor: comp2)
       create_list(:competitor_event_with_medal, 2, competitor: comp1)
 
       expect(comp1.total_medal_count).to eq(7)

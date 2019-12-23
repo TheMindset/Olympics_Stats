@@ -31,7 +31,7 @@ class Competitor < ApplicationRecord
 
   enum sex: { F: 0, M: 1 }
 
-  def total_medal_won
+  def total_medal_count
     competitor_events.where.not(medal: 0).count
   end
 end
