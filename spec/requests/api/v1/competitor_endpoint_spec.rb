@@ -20,4 +20,17 @@ RSpec.describe 'Competitor endpoint', type: :request do
     expect(first_competitor).to have_key(:team)
     expect(first_competitor).to have_key(:total_medal_count)
   end
+
+  it 'returns the youngest oompetitor' do
+    create(:competitor, age: 19)
+    create_list(:competitor, 4)
+
+    get '/api/v1/competitors?age=youngest'
+
+    expect(response).to be_successful
+
+    youngest_competitor = JSON.parse(response.body, symbolize_names: true)[:data][0][:attributes]
+
+    expect(youngest_competitor[:age]).to eq(19)
+  end
 end
