@@ -30,4 +30,8 @@ class Competitor < ApplicationRecord
   has_many :events, through: :competitor_events
 
   enum sex: { F: 0, M: 1 }
+
+  def total_medal_won
+    competitor_events.where.not(medal: 0).count
+  end
 end
