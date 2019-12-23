@@ -4,7 +4,13 @@ module Api
   module V1
     class CompetitorsController < ApplicationController
       def index
-        render json: CompetitorSerializer.new(Competitor.all)
+        render json: CompetitorSerializer.new(
+          Competitor.includes(
+            :team,
+            :events,
+            :sports
+          )
+        )
       end
     end
   end
