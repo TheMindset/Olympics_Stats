@@ -2,22 +2,22 @@
 
 require 'rails_helper'
 
-RSpec.descrice 'Competitor endpoint', type: :request do
-  it 'returnses the list of all competitor' do
+RSpec.describe 'Competitor endpoint', type: :request do
+  it 'returns the list of all competitors' do
     create_list(:competitor, 8)
 
-    get 'api/v1/competitor'
+    get '/api/v1/competitors'
 
     expect(response).to be_successful
 
-    competitors = JSON.parse(response.body, symbolize: true)[:data]
-
+    competitors = JSON.parse(response.body, symbolize_names: true)[:data]
+    first_competitor = competitors[0][:attributes]
     expect(competitors.count).to eq(8)
 
-    expect(competitors[0]).to have_key(:age)
-    expect(competitors[0]).to have_key(:name)
-    expect(competitors[0]).to have_key(:sport)
-    expect(competitors[0]).to have_key(:team)
-    expect(competitors[0]).to have_key(:total_medal_won)
+    expect(first_competitor).to have_key(:age)
+    expect(first_competitor).to have_key(:name)
+    expect(first_competitor).to have_key(:sports)
+    expect(first_competitor).to have_key(:team)
+    expect(first_competitor).to have_key(:total_medal_count)
   end
 end
