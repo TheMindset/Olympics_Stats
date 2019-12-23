@@ -18,9 +18,21 @@
 #
 
 FactoryBot.define do
+  medals = ["NA", "Bronze", "Silver", "Gold"]
+
   factory :competitor_event do
     competitor { FactoryBot.create(:competitor) }
     event { FactoryBot.create(:event) }
-    medal { ["NA", "Bronze", "Silver", "Gold"].sample }
+    medal { medals.sample }
+  end
+
+  factory :competitor_event_with_medal, parent: :competitor_event do
+    medals = ["Bronze", "Silver", "Gold"]
+
+    medal { medals.sample }
+  end
+
+  factory :competitor_event_without_medal, parent: :competitor_event do
+    medal { "NA" }
   end
 end
