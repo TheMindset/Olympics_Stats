@@ -48,5 +48,21 @@ RSpec.describe Competitor, type: :model do
       expect(comp1.total_medal_count).to eq(7)
       expect(comp2.total_medal_count).to eq(2)
     end
+
+    it "#youngest competitor" do
+      youngest = create(:competitor, age: 20)
+      create(:competitor, age: 45)
+      create(:competitor, age: 31)
+
+      expect(described_class.youngest_competitor).to eq(youngest)
+    end
+
+    it "#oldest competitor" do
+      create(:competitor, age: 20)
+      oldest = create(:competitor, age: 45)
+      create(:competitor, age: 31)
+
+      expect(described_class.oldest_competitor).to eq(oldest)
+    end
   end
 end

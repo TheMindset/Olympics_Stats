@@ -34,4 +34,12 @@ class Competitor < ApplicationRecord
   def total_medal_count
     competitor_events.where.not(medal: 0).count
   end
+
+  def self.youngest_competitor
+    find_by(age: minimum(:age))
+  end
+
+  def self.oldest_competitor
+    find_by(age: maximum(:age))
+  end
 end
