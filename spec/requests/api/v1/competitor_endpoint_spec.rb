@@ -33,4 +33,17 @@ RSpec.describe 'Competitor endpoint', type: :request do
 
     expect(youngest_competitor[:age]).to eq(19)
   end
+
+  it 'returns the oldest oompetitor' do
+    create(:competitor, age: 42)
+    create_list(:competitor, 4)
+
+    get '/api/v1/competitors?age=oldest'
+
+    expect(response).to be_successful
+
+    oldest_competitor = JSON.parse(response.body, symbolize_names: true)[:data][0][:attributes]
+
+    expect(oldest_competitor[:age]).to eq(42)
+  end
 end
