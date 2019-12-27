@@ -8,6 +8,10 @@ The deployed site's endpoints can be consumed at:
 
 https://olympics-stats.herokuapp.com/
 
+## Schema
+
+[Olympics_stats schema](https://dbdiagram.io/d/5e06859aedf08a25543f750b)
+
 ## Endpoints
 
 ### GET /api/v1/competitors
@@ -409,3 +413,40 @@ Returns a list of teams with the total event participation
     }
 }
 ```
+
+## Get Started
+
+### Requirements
+
+* [Ruby 2.6.3](https://www.ruby-lang.org/en/downloads/) - Ruby Version
+* [Rails 5.2.3](https://rubyonrails.org/) - Rails Version
+
+```
+$ git clone git@github.com:TheMindset/Olympics_Stats.git
+$ cd Olympics_stats
+$ bundle install
+```
+
+### Setup Database
+
+* Install [PostgresQL](https://www.postgresql.org/download/)
+Run this commands:
+
+```
+$ rails db:create db:migrate
+$ rake import_olympic_data:persit_data_in_db  
+
+```
+
+
+### API Exploration
+
+Once installation and database setup are complete, explore the various API endpoints with the following steps:
+* `$ rails s`
+* Open your browser, and visit `http://localhost:3000/`
+* In a separate terminal window, query the available endpoints by running `rails routes`
+* Copy any of the URIs displayed and append to `http://localhost:3000/` in your browser
+
+### Running Tests
+
+`$ rails rspec`.
