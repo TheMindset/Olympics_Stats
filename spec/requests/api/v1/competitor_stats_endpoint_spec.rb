@@ -14,23 +14,23 @@ RSpec.describe 'Competitor Stats', type: :request do
   end
 
   it 'returns stats on all Competitors' do
-    get '/api/v1/competitor_stats'
+    get '/api/v1/competitors_stats'
 
     expect(response).to be_successful
 
-    competitor_stats = JSON.parse(response.boby, symbolize_names: true)[:data]
+    competitor_stats = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
     competitor_average_weight = competitor_stats[:average_weight]
     competitor_average_height = competitor_stats[:average_height]
 
     expect(competitor_stats[:total_competitors]).to eq(7)
-    expect(competitor_stats[:average_age]).to eq(25)
+    expect(competitor_stats[:average_age]).to eq(24)
 
-    expect(competitor_average_weight[:units]).to eq('kg')
-    expect(competitor_average_weight[:female_average]).to eq(24)
-    expect(competitor_average_weight[:male_average]).to eq(27)
+    expect(competitor_average_weight[:unit]).to eq('kg')
+    expect(competitor_average_weight[:female_competitors]).to eq(61)
+    expect(competitor_average_weight[:male_competitors]).to eq(72)
 
-    expect(competitor_average_height[:units]).to eq('cm')
-    expect(competitor_average_height[:female_average]).to eq(62)
-    expect(competitor_average_height[:male_average]).to eq(72)
+    expect(competitor_average_height[:unit]).to eq('cm')
+    expect(competitor_average_height[:female_competitors]).to eq(166)
+    expect(competitor_average_height[:male_competitors]).to eq(177)
   end
 end
