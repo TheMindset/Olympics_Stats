@@ -104,7 +104,7 @@ Also accepts the query param `age`. `/api/v1/competitors?age=youngest` will retu
 ```
 ### GET `/api/v1/competitors_stats`
 
-Returns statistcs for all competitors (total Olympics competitors, avarage age, weight and height)
+Returns statistcs for all competitors (total Olympics competitors, avarage age, weight and height).
 
 #### Example of expected response:
 
@@ -128,5 +128,74 @@ Returns statistcs for all competitors (total Olympics competitors, avarage age, 
             }
         }
     }
+}
+```
+
+### GET `/api/v1/events`
+
+Returns a list of all events for each Sport.
+
+#### Example of expected response:
+
+```json
+{
+    "data": [
+        {
+            "id": "3",
+            "type": "sports",
+            "attributes": {
+                "name": "Athletics",
+                "events": [
+                    "Athletics Men's 5,000 metres",
+                    "Athletics Men's 400 metres",
+                    "Athletics Men's 10,000 metres",
+                    "Athletics Women's 200 metres",
+                    "Athletics Men's Decathlon",
+                    "Athletics Men's Marathon",
+                    "Athletics Women's Shot Put",
+                    "Athletics Women's 400 metres",
+                    "Athletics Men's Shot Put",
+                    "Athletics Women's Marathon",
+                    "Athletics Men's 100 metres",
+                    "Athletics Women's 100 metres",
+                    "Athletics Women's 4 x 100 metres Relay",
+                    "Athletics Men's 200 metres",
+                    "Athletics Men's 4 x 100 metres Relay",
+                    "Athletics Men's High Jump",
+                    "Athletics Men's Triple Jump",
+                    "Athletics Women's Heptathlon",
+                    "Athletics Women's Javelin Throw",
+                    "Athletics Women's Pole Vault",
+                    "Athletics Women's 20 kilometres Walk",
+                    "Athletics Women's 3,000 metres Steeplechase",
+                    "Athletics Men's 3,000 metres Steeplechase",
+                    "Athletics Women's 800 metres",
+                    "Athletics Women's 1,500 metres",
+                    "Athletics Men's Discus Throw",
+                    "Athletics Men's 1,500 metres",
+                    "Athletics Men's 400 metres Hurdles",
+                    "Athletics Women's Long Jump",
+                    "Athletics Men's 110 metres Hurdles",
+                    "Athletics Women's 100 metres Hurdles",
+                    "Athletics Women's 5,000 metres",
+                    "Athletics Men's 4 x 400 metres Relay",
+                    "Athletics Men's Long Jump",
+                    "Athletics Men's 800 metres",
+                    "Athletics Women's High Jump",
+                    "Athletics Men's Javelin Throw",
+                    "Athletics Women's 4 x 400 metres Relay",
+                    "Athletics Women's 400 metres Hurdles",
+                    "Athletics Women's Discus Throw",
+                    "Athletics Men's Hammer Throw",
+                    "Athletics Women's 10,000 metres",
+                    "Athletics Men's 50 kilometres Walk",
+                    "Athletics Men's 20 kilometres Walk",
+                    "Athletics Men's Pole Vault",
+                    "Athletics Women's Triple Jump",
+                    "Athletics Women's Hammer Throw"
+                ]
+            }
+        }
+    ]
 }
 ```
