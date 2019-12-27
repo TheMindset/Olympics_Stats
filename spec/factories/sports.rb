@@ -11,34 +11,7 @@
 #
 
 FactoryBot.define do
-  sports = [
-    'Weightlifting', 'Gymnastics',
-    'Weightlifting', 'Gymnastics',
-    'Athletics',     'Rowing',
-    'Athletics',     'Rowing',
-    'Taekwondo',     'Boxing',
-    'Taekwondo',     'Boxing',
-    'Equestrianism', 'Cycling',
-    'Equestrianism', 'Cycling',
-    'Badminton',     'Rugby Sevens',
-    'Badminton',     'Rugby Sevens',
-    'Table Tennis',  'Water Polo',
-    'Table Tennis',  'Water Polo',
-    'Trampolining',  'Basketball',
-    'Trampolining',  'Basketball',
-    'Triathlon',     'Modern Pentathlon',
-    'Triathlon',     'Modern Pentathlon',
-    'Sailing',       'Beach Volleyball',
-    'Sailing',       'Beach Volleyball',
-    'Golf',          'Rhythmic Gymnastics',
-    'Golf',          'Rhythmic Gymnastics',
-    'Hockey',        'Gymnastics',
-    'Hockey',        'Gymnastics',
-    'Archery',       'Tennis',
-    'Archery',       'Tennis'
-  ]
-
   factory :sport do
-    name { sports.pop }
+    name { Faker::Sports::Football.team }
   end
 end
