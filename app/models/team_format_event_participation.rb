@@ -8,7 +8,7 @@ class TeamFormatEventParticipation
   def team_format
     {
       team: @team.name,
-      event_participation: "#{Event.team_events(@team.id).count} of #{Event.count} events",
+      team_event_participation: "#{Event.team_events(@team.id).count} of #{Event.count} events",
       events: Event.team_events(@team.id)
     }
   end

@@ -33,7 +33,7 @@ RSpec.describe "Event particiaption endpoint", type: :request do
     first_team = event_participations[0]
 
     expect(first_team).to have_key(:team)
-    expect(first_team).to have_key(:event_participation)
+    expect(first_team).to have_key(:team_event_participation)
     expect(first_team).to have_key(:events)
     expect(first_team[:events].count).to eq(3)
   end
