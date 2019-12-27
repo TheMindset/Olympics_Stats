@@ -1,14 +1,16 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Competitor Stats', type: :request do
-  before :each do
-    comp1 = create(:Competitor, sex: 'F', age: 18, height: 159, weight: 61)
-    comp2 = create(:Competitor, sex: 'M', age: 35, height: 181, weight: 75)
-    comp3 = create(:Competitor, sex: 'F', age: 27, height: 162, weight: 65)
-    comp4 = create(:Competitor, sex: 'M', age: 18, height: 174, weight: 69)
-    comp5 = create(:Competitor, sex: 'F', age: 16, height: 159, weight: 57)
-    comp6 = create(:Competitor, sex: 'F', age: 26, height: 174, weight: 61)
-    comp7 = create(:Competitor, sex: 'F', age: 31, height: 179, weight: 63)
+  before do
+    create(:competitor, sex: 'F', age: 18, height: 159, weight: 61)
+    create(:competitor, sex: 'M', age: 35, height: 181, weight: 75)
+    create(:competitor, sex: 'F', age: 27, height: 162, weight: 65)
+    create(:competitor, sex: 'M', age: 18, height: 174, weight: 69)
+    create(:competitor, sex: 'F', age: 16, height: 159, weight: 57)
+    create(:competitor, sex: 'F', age: 26, height: 174, weight: 61)
+    create(:competitor, sex: 'F', age: 31, height: 179, weight: 63)
   end
 
   it 'returns stats on all Competitors' do

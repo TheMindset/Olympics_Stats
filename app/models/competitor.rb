@@ -42,4 +42,13 @@ class Competitor < ApplicationRecord
   def self.oldest_competitor
     find_by(age: maximum(:age))
   end
+
+  def self.total_competitors
+    Competitor.count
+  end
+
+  def self.competitors_average(gender, attribute)
+    where(sex: gender)
+      .average(attribute)
+  end
 end
