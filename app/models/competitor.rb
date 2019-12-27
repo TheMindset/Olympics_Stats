@@ -51,4 +51,11 @@ class Competitor < ApplicationRecord
     where(sex: gender)
       .average(attribute)
   end
+
+  def self.medalists_competitors(event_id)
+    select('competitors.*, competitor_events.medal AS medal')
+      .joins(:events)
+      .where('events.id = ?', event_id)
+      .where.not('competitor_events.medal = ?', 0)
+  end
 end
