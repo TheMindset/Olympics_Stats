@@ -10,7 +10,7 @@ https://olympics-stats.herokuapp.com/
 
 ## Schema
 
-[Olympics_stats schema](/public/images/olympics_stats_schema.png)
+![Olympics_stats schema](/public/images/olympics_stats_schema.png)
 
 ## Endpoints
 
