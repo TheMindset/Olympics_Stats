@@ -18,13 +18,13 @@ RSpec.describe 'Medalists competitors endpoint', type: :request do
     create(:competitor_event_with_medal, event: ev3, competitor: comp3)
     create(:competitor_event_with_medal, event: ev4, competitor: comp4)
 
-    get 'api/v1/medalists'
+    get '/api/v1/medalists'
 
     expect(response).to be_successful
 
-    events = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+    events = JSON.parse(response.body, symbolize_names: true)[:data][:attributes][:event_medalists]
     event = events[0]
-    first_event_medalists = event[:medalists]
+    first_event_medalists = event[:medalists][0]
 
     expect(events.count).to eq(4)
     expect(event).to have_key(:event_name)
