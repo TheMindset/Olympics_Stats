@@ -102,3 +102,31 @@ Also accepts the query param `age`. `/api/v1/competitors?age=youngest` will retu
     }
 }
 ```
+### GET `/api/v1/competitors_stats`
+
+Returns statistcs for all competitors (total Olympics competitors, avarage age, weight and height)
+
+#### Example of expected response:
+
+```json
+{
+    "data": {
+        "id": null,
+        "type": "competitors_stats",
+        "attributes": {
+            "total_competitors": 2850,
+            "average_age": 26,
+            "average_height": {
+                "unit": "cm",
+                "female_competitors": 167,
+                "male_competitors": 179
+            },
+            "average_weight": {
+                "unit": "kg",
+                "female_competitors": 61,
+                "male_competitors": 77
+            }
+        }
+    }
+}
+```
