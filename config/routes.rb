@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get '/competitors_stats', to: 'competitors_stats#index'
       get '/events', to: 'events#index'
       get '/medalists', to: 'medalists#index'
+      get '/medal_count', to: 'medal_count#index'
     end
   end
 end
