@@ -23,19 +23,18 @@ RSpec.describe "Event particiaption endpoint", type: :request do
     create(:competitor_event_with_medal, event: ev3, competitor: comp1)
     create(:competitor_event_with_medal, event: ev3, competitor: comp3)
     create(:competitor_event_with_medal, event: ev4, competitor: comp4)
-    create(:competitor_event_with_medal, event: ev4, competitor: comp1)
     create(:competitor_event_with_medal, event: ev4, competitor: comp4)
 
     get '/api/v1/event_participation'
 
     expect(response).to be_successful
 
-    event_participations = JSON.parse(response.body, symbolize_names: true)[:data][:attributes][:team_participation]
+    event_participations = JSON.parse(response.body, symbolize_names: true)[:data][:attributes][:participations_by_team]
     first_team = event_participations[0]
 
-    expect(first_team).to have_key[:team]
-    expect(first_team).to have_key[:event_participation]
-    expect(first_team).to have_key[:events]
-    expect(first_team[:events]).to eq(3)
+    expect(first_team).to have_key(:team)
+    expect(first_team).to have_key(:event_participation)
+    expect(first_team).to have_key(:events)
+    expect(first_team[:events].count).to eq(3)
   end
 end
