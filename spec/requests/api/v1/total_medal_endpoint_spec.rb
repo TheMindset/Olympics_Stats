@@ -29,10 +29,11 @@ RSpec.describe "Total medals endpoint", type: :request do
     expect(response).to be_successful
 
     teams = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
-    team = teams[:team_medalists][0]
+    team = teams[:medals_by_team][0]
     team_medals = team[:medals]
 
-    expect(teams.count).to eq(2)
+    expect(teams[:medals_by_team].count).to eq(2)
+
     expect(team).to have_key(:team)
     expect(team).to have_key(:total_medal_count)
     expect(team_medals).to have_key(:bronze)
