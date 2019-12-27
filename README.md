@@ -199,3 +199,38 @@ Returns a list of all events for each Sport.
     ]
 }
 ```
+### GET `/api/v1/medalists`
+
+Returns a list of all medalists by event
+
+#### Example of expected response
+
+```json
+{
+    "data": {
+        "id": null,
+        "type": "events",
+        "attributes": {
+            "event_medalists": [
+                {
+                    "event_name": "Taekwondo Women's Flyweight",
+                    "medalists": [
+                        {
+                            "name": "Patimat Abakarova",
+                            "age": 21,
+                            "team": "Azerbaijan",
+                            "medal": "Bronze"
+                        },
+                        {
+                            "name": "Tijana Bogdanovi",
+                            "age": 18,
+                            "team": "Serbia",
+                            "medal": "Silver"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
+```
