@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class FormatEventParticipation
+class TeamFormatEventParticipation
   def initialize(team)
     @team = team
   end

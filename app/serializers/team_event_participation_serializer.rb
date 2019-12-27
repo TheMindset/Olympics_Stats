@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class EventParticipationSerializer
+class TeamEventParticipationSerializer
   include FastJsonapi::ObjectSerializer
   set_type :team_participation
   set_id :id
