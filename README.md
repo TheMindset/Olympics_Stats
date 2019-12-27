@@ -234,3 +234,31 @@ Returns a list of all medalists by event
     }
 }
 ```
+
+### GET `/api/v1/medal_count`
+
+Returns a list of teams with the total medal won
+
+#### Example of expected response
+
+```json
+{
+    "data": {
+        "id": null,
+        "type": "teams",
+        "attributes": {
+            "medals_by_team": [
+                {
+                    "team": "Romania",
+                    "total_medal_count": 7,
+                    "medals": {
+                        "bronze": 5,
+                        "silver": 0,
+                        "gold": 2
+                    }
+                }
+            ]
+        }
+    }
+}
+```
