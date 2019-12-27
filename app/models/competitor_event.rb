@@ -22,4 +22,6 @@ class CompetitorEvent < ApplicationRecord
   belongs_to :event
 
   enum medal: { NA: 0, Bronze: 1, Silver: 2, Gold: 3 }
+
+  scope :event_with_medal, -> { where.not(medal: 0) }
 end
