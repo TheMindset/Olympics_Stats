@@ -262,3 +262,150 @@ Returns a list of teams with the total medal won
     }
 }
 ```
+
+### GET `/api/v1/event_participation`
+
+Returns a list of teams with the total event participation
+
+#### Example of expected response
+
+```json
+{
+    "data": {
+        "id": null,
+        "type": "team_participation",
+        "attributes": {
+            "participations_by_team": [
+                {
+                    "team": "Romania",
+                    "event_participation": "29 of 305 events",
+                    "events": [
+                        "Weightlifting Women's Super-Heavyweight",
+                        "Rowing Men's Coxless Fours",
+                        "Wrestling Men's Heavyweight, Greco-Roman",
+                        "Athletics Women's 20 kilometres Walk",
+                        "Handball Women's Handball",
+                        "Tennis Women's Singles",
+                        "Tennis Mixed Doubles",
+                        "Tennis Women's Doubles",
+                        "Rowing Women's Lightweight Double Sculls",
+                        "Rowing Women's Coxless Pairs",
+                        "Rowing Women's Coxed Eights",
+                        "Athletics Women's 800 metres",
+                        "Athletics Women's 3,000 metres Steeplechase",
+                        "Fencing Women's epee, Individual",
+                        "Fencing Women's epee, Team",
+                        "Athletics Women's Triple Jump",
+                        "Fencing Women's Foil, Individual",
+                        "Judo Women's Lightweight",
+                        "Weightlifting Men's Middleweight",
+                        "Judo Women's Half-Lightweight",
+                        "Athletics Women's Marathon",
+                        "Athletics Men's 50 kilometres Walk",
+                        "Swimming Men's 4 x 100 metres Freestyle Relay",
+                        "Table Tennis Men's Singles",
+                        "Swimming Women's 100 metres Freestyle",
+                        "Fencing Men's Sabre, Individual",
+                        "Gymnastics Men's Floor Exercise",
+                        "Gymnastics Men's Horse Vault",
+                        "Gymnastics Men's Horizontal Bar"
+                    ]
+                },
+                {
+                    "team": "Spain",
+                    "event_participation": "87 of 305 events",
+                    "events": [
+                        "Gymnastics Men's Individual All-Around",
+                        "Gymnastics Men's Floor Exercise",
+                        "Gymnastics Men's Parallel Bars",
+                        "Gymnastics Men's Horizontal Bar",
+                        "Gymnastics Men's Rings",
+                        "Gymnastics Men's Pommelled Horse",
+                        "Athletics Men's 5,000 metres",
+                        "Badminton Men's Singles",
+                        "Basketball Men's Basketball",
+                        "Athletics Women's Marathon",
+                        "Water Polo Men's Water Polo",
+                        "Handball Women's Handball",
+                        "Rhythmic Gymnastics Women's Group",
+                        "Sailing Women's Windsurfer",
+                        "Triathlon Men's Olympic Distance",
+                        "Swimming Men's 4 x 100 metres Freestyle Relay",
+                        "Hockey Men's Hockey",
+                        "Equestrianism Mixed Jumping, Individual",
+                        "Equestrianism Mixed Jumping, Team",
+                        "Archery Men's Individual",
+                        "Archery Men's Team",
+                        "Athletics Men's 800 metres",
+                        "Athletics Men's 20 kilometres Walk",
+                        "Swimming Men's 1,500 metres Freestyle",
+                        "Athletics Women's Discus Throw",
+                        "Water Polo Women's Water Polo",
+                        "Beach Volleyball Women's Beach Volleyball",
+                        "Tennis Men's Singles",
+                        "Tennis Men's Doubles",
+                        "Athletics Women's High Jump",
+                        "Swimming Women's 400 metres Freestyle",
+                        "Swimming Women's 800 metres Freestyle",
+                        "Swimming Women's 200 metres Butterfly",
+                        "Swimming Women's 200 metres Individual Medley",
+                        "Swimming Women's 400 metres Individual Medley",
+                        "Canoeing Men's Canadian Singles, 200 metres",
+                        "Judo Women's Middleweight",
+                        "Sailing Women's Skiff",
+                        "Sailing Men's One Person Dinghy",
+                        "Rowing Women's Coxless Pairs",
+                        "Athletics Women's 400 metres",
+                        "Hockey Women's Hockey",
+                        "Sailing Men's Skiff",
+                        "Weightlifting Men's Bantamweight",
+                        "Rugby Sevens Women's Rugby Sevens",
+                        "Athletics Men's 1,500 metres",
+                        "Golf Men's Individual",
+                        "Taekwondo Women's Featherweight",
+                        "Cycling Women's Sprint",
+                        "Cycling Women's Keirin",
+                        "Cycling Women's Team Sprint",
+                        "Synchronized Swimming Women's Duet",
+                        "Boxing Men's Light-Flyweight",
+                        "Canoeing Men's Kayak Fours, 1,000 metres",
+                        "Shooting Men's Air Pistol, 10 metres",
+                        "Shooting Men's Free Pistol, 50 metres",
+                        "Rugby Sevens Men's Rugby Sevens",
+                        "Athletics Men's 3,000 metres Steeplechase",
+                        "Athletics Men's Discus Throw",
+                        "Triathlon Women's Olympic Distance",
+                        "Equestrianism Mixed Dressage, Individual",
+                        "Equestrianism Mixed Dressage, Team",
+                        "Athletics Men's Marathon",
+                        "Swimming Women's 200 metres Freestyle",
+                        "Swimming Women's 4 x 100 metres Freestyle Relay",
+                        "Swimming Women's 4 x 200 metres Freestyle Relay",
+                        "Cycling Men's Road Race, Individual",
+                        "Cycling Men's Individual Time Trial",
+                        "Sailing Women's One Person Dinghy",
+                        "Canoeing Women's Kayak Singles, Slalom",
+                        "Athletics Men's Hammer Throw",
+                        "Golf Women's Individual",
+                        "Cycling Men's Mountainbike, Cross-Country",
+                        "Athletics Men's 110 metres Hurdles",
+                        "Sailing Women's Two Person Dinghy",
+                        "Canoeing Men's Kayak Singles, 200 metres",
+                        "Canoeing Men's Kayak Doubles, 200 metres",
+                        "Basketball Women's Basketball",
+                        "Swimming Women's 100 metres Backstroke",
+                        "Swimming Women's 200 metres Backstroke",
+                        "Shooting Men's Air Rifle, 10 metres",
+                        "Athletics Men's 50 kilometres Walk",
+                        "Swimming Men's 400 metres Freestyle",
+                        "Swimming Men's 4 x 200 metres Freestyle Relay",
+                        "Table Tennis Women's Singles",
+                        "Sailing Mixed Multihull",
+                        "Canoeing Men's Canadian Singles, Slalom"
+                    ]
+                }
+            ]
+        }
+    }
+}
+```
