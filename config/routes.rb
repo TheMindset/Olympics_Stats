@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get '/events', to: 'events#index'
       get '/medalists', to: 'medalists#index'
       get '/medal_count', to: 'medal_count#index'
+      get '/event_participation', to: 'event_participation#index'
     end
   end
 end
