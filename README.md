@@ -14,12 +14,16 @@ https://olympics-stats.herokuapp.com/
 
 ## Endpoints
 
+
+
 ### GET /api/v1/competitors
 
 Returns a list of all Competitors in the database, with their name, age, team, sports and the total medals won.
 
 #### Example of expected response:
 
+
+ <details>
 ```json
 {
     "data": [
@@ -71,9 +75,13 @@ Returns a list of all Competitors in the database, with their name, age, team, s
                 "total_medal_count": 0
             }
         }
-  ]
+    ]   
 }
 ```
+</details>
+
+---
+
 Also accepts the query param `age`. `/api/v1/competitors?age=youngest` will return the youngest Competitor and `/api/v1/competitors?age=youngest` will return the oldest Competitor.
 
 #### Example of expected response:
