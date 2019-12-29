@@ -14,17 +14,15 @@ https://olympics-stats.herokuapp.com/
 
 ## Endpoints
 
-
-
 ### GET /api/v1/competitors
 
 Returns a list of all Competitors in the database, with their name, age, team, sports and the total medals won.
 
 #### Example of expected response:
 
-
  <details>
-```json
+
+```javascript
 {
     "data": [
         {
@@ -86,7 +84,9 @@ Also accepts the query param `age`. `/api/v1/competitors?age=youngest` will retu
 
 #### Example of expected response:
 
-```json
+<details>
+
+```javascript
 {
     "data": {
         "id": "2190",
@@ -114,13 +114,19 @@ Also accepts the query param `age`. `/api/v1/competitors?age=youngest` will retu
     }
 }
 ```
+</details>
+
+---
+
 ### GET `/api/v1/competitors_stats`
 
 Returns statistcs for all competitors (total Olympics competitors, avarage age, weight and height).
 
 #### Example of expected response:
 
-```json
+<details>
+
+```javascript
 {
     "data": {
         "id": null,
@@ -142,6 +148,9 @@ Returns statistcs for all competitors (total Olympics competitors, avarage age, 
     }
 }
 ```
+</details>
+
+---
 
 ### GET `/api/v1/events`
 
@@ -149,7 +158,9 @@ Returns a list of all events for each Sport.
 
 #### Example of expected response:
 
-```json
+<details>
+
+```javascript
 {
     "data": [
         {
@@ -211,13 +222,19 @@ Returns a list of all events for each Sport.
     ]
 }
 ```
+</details>
+
+---
+
 ### GET `/api/v1/medalists`
 
 Returns a list of all medalists by event
 
 #### Example of expected response
 
-```json
+<details>
+
+```javascript
 {
     "data": {
         "id": null,
@@ -246,6 +263,9 @@ Returns a list of all medalists by event
     }
 }
 ```
+</details>
+
+---
 
 ### GET `/api/v1/medal_count`
 
@@ -253,7 +273,9 @@ Returns a list of teams with the total medal won
 
 #### Example of expected response
 
-```json
+<details>
+
+```javascript
 {
     "data": {
         "id": null,
@@ -274,6 +296,9 @@ Returns a list of teams with the total medal won
     }
 }
 ```
+</details>
+
+---
 
 ### GET `/api/v1/event_participation`
 
@@ -281,7 +306,9 @@ Returns a list of teams with the total event participation
 
 #### Example of expected response
 
-```json
+<details>
+
+```javascript
 {
     "data": {
         "id": null,
@@ -421,6 +448,9 @@ Returns a list of teams with the total event participation
     }
 }
 ```
+</details>
+
+---
 
 ## Get Started
 
@@ -445,7 +475,6 @@ $ rails db:create db:migrate
 $ rake import_olympic_data:persit_data_in_db  
 
 ```
-
 
 ### API Exploration
 
