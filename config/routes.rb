@@ -11,4 +11,5 @@ Rails.application.routes.draw do
       get '/event_participation', to: 'team_event_participation#index'
     end
   end
+  root 'static#index'
 end
